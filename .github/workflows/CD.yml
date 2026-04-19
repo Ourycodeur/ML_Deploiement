@@ -1,0 +1,23 @@
+name: CD - Deploy to Hugging Face
+
+on:
+  push:
+    branches:
+      - main   # uniquement quand tu pushes sur main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Push to Hugging Face Space
+        env:
+          HF_TOKKEN: ${{ secrets.HF_TOKKEN }}
+        run: |
+          git config --global user.email "you@example.com"
+          git config --global user.name "github-actions"
+
+          git clone https://user:$HF_TOKEN@huggingface.co/spaces/MOB2408/Deploy
