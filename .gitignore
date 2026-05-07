@@ -1,5 +1,5 @@
 env
 pyproject.toml
 .ipynb_checkpoints
-.coverage
 __pycache__/
+*.pyc

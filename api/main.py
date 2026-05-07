@@ -1,5 +1,6 @@
 # Importation des bibliothèques nécessaires
 import joblib
+<<<<<<< HEAD
 import pandas as pd
 import numpy as np
 from fastapi import FastAPI, Depends
@@ -131,10 +132,7 @@ def predict(employee_data: EmployeeData, db: Session = Depends(get_db)):
         "message": message  # Message de prédiction
     }
     
-    
-    
-  
-    
+
 
 @app.get("/health")
 def health():
