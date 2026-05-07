@@ -35,7 +35,7 @@ pip install -r requirements.txt
 
 La structure est la suivante :
 
-'''
+```
 api/
  ├── main.py              # FastAPI app and endpoints
  ├── database.py          # DB connection (SQLAlchemy)
@@ -45,7 +45,7 @@ db/
  ├── models.py            # Database tables (SQLAlchemy)
 Modèle/
  ├── logistic_model.pkl   # Trained ML model
-'''
+```
 
 
 
@@ -53,14 +53,14 @@ Modèle/
 
 ## Executer les tests unitaires et fonctionnels 
 
-
+```
 test
 |---conftest.py              # Test de la base de donnée
 |---test_api.py		     # Test de chaque endpoint de l'api
 |---test_crud.py	     # Test des données d'insertion
 |---test_model.py            # Test du model dans sa prediction soit 0 ou 1
 |---test_performance.py      # Test de rapidité de prédiction
-
+```
 
 ```
 on lance directement : pytest
