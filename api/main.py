@@ -9,12 +9,17 @@ from api.crud import create_employee_input, creation_prediction
 from api.schemas import EmployeeData
 from sqlalchemy.orm import Session
 from db.models import Base
+from pathlib import Path 
 
 ## Création de la base de données et des tables
 Base.metadata.create_all(bind=engine)
 
 # Chargement du modèle et des features
-model = joblib.load("C:\\Users\\El. OURY BALDE\\Downloads\\P4\\P4\\Modèle\\logistic_model.pkl")
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+model_path = BASE_DIR / "Modèle" / "logistic_model.pkl"
+
+model = joblib.load(model_path)
 
 # Création de l'application FastAPI
 app = FastAPI()
@@ -75,7 +80,7 @@ def predict_info():
     - Sortie :
             predicted_label: 0 ou 1,
             probability": valeur entre 0 et 1
-    """,)
+    """)
 
 def predict(employee_data: EmployeeData, db: Session = Depends(get_db)):
     input_dict = employee_data.model_dump()
@@ -120,7 +125,7 @@ def predict(employee_data: EmployeeData, db: Session = Depends(get_db)):
     message = (
         "L'employé risque de quitter l'entreprise"
         if predicted_label == 1
-        else "L'employé risque de rester dans l'entreprise"
+        else "L'employé va rester dans l'entreprise"
     )
     
         
