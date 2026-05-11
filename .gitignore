@@ -4,3 +4,4 @@ pyproject.toml
 .coverage
 __pycache__/
 htmlcov
+*.pyc
