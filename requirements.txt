@@ -10,5 +10,5 @@ uvicorn
 sqlalchemy
 psycopg2-binary
 pytest
-pystest-cov
+pytest-cov
 httpx
