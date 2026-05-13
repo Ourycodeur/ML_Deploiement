@@ -1,0 +1,35 @@
+1fe86c8 modification database
+76f549c Modification de la CI
+66aa2d0 Modification de version
+ebdf13c Modification des fichiers à eviter
+1031508 Suppression du fichier presentation
+0d01187 Modification de la CI
+6f7b6fe Modification de la CI
+c2af53d Upgrade checkout action from v3 to v4
+593ed9b modification du readme
+f1e5b29 Modification fichier
+6509ebc Resolution conflit
+17a3db3 Resolution conflit
+c6b3648 Ajout dependances a ignorer et api
+1c5fdc0 Ajout des dependances à ignorer
+b150618 Reecriture git
+3ca6a88 Ajout elements API , Postgresql, test et interface hugging face
+cb93352 Ajout des jeux de données finales
+f1322b0 Merge pull request #2 from Ourycodeur/develop
+772d35e Ajout modification notebook plus interface
+ac4e3b8 Ajout du fichier dependance provenant de develop
+be73c7b Ajout des dépendances à installer
+5014a9a Ajout de CD pour le déploiement après avoir réussi l'étaoe CI
+2600127 Ajout de la CI pour effectuer le test avec la version de python et des dépendances installer
+59aee71 Merge pull request #1 from Ourycodeur/develop
+535baf9 Ajout de l'api
+b422604 Ajout du dossier qui contient le modèle
+b77fed2 Ajout du dossier dataset provenant de develop
+18ee96e Ajout du dossier notebook provenant de develop
+c5e647f ajout du dossier presentation provenant de la branche develop
+487d68f Ajout du dossier de presentation
+9dfdf04 Ajout du jeu de donnée
+86cfedd Ajout du dossier du jeu de donnée
+8253ad1 Ajout des éléments à ignorer
+759e072 Ajout du fichier pré-réquis d'installation
+6d2b7a0 Ajout du fichier explication projet
