@@ -26,10 +26,6 @@ jobs:
         run: |
           git clone https://MOB2408:$HF_TOKEN@huggingface.co/spaces/MOB2408/Deploy
 
-      - name: Copy project files
-        run: |
-          cp -r app.py requirements.txt Model Deploy/
-
       - name: Push to Hugging Face
         env:
           HF_TOKEN: ${{ secrets.HF_TOKkEN }}
