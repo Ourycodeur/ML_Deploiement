@@ -3,21 +3,39 @@ name: CD - Deploy to Hugging Face
 on:
   push:
     branches:
-      - main   # uniquement quand tu pushes sur main
+      - main
 
 jobs:
   deploy:
+
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Push to Hugging Face Space
-        env:
-          HF_TOKKEN: ${{ secrets.HF_TOKKEN }}
+      - name: Configure Git
         run: |
           git config --global user.email "you@example.com"
           git config --global user.name "github-actions"
 
-          git clone https://user:$HF_TOKEN@huggingface.co/spaces/MOB2408/Deploy
+      - name: Clone Hugging Face Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKkEN }}
+        run: |
+          git clone https://MOB2408:$HF_TOKEN@huggingface.co/spaces/MOB2408/Deploy
+
+      - name: Copy project files
+        run: |
+          cp -r app.py requirements.txt Model Deploy/
+
+      - name: Push to Hugging Face
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKkEN }}
+        run: |
+          cd Deploy
+          git add .
+          git commit -m "Deploiement automatique via GitHub Actions" || echo "Aucun changement"
+
+          git push https://MOB2408:$HF_TOKEN@huggingface.co/spaces/MOB2408/Deploy main
